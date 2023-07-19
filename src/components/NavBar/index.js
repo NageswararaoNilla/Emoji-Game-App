@@ -1,25 +1,27 @@
 import './index.css'
 
 const NavBar = props => {
-  const {score, topScore, isWon} = props
-
-  const resultClass = isWon !== '' ? 'score-inactive' : ''
+  const {currentScore, isGameInProgress, topScore} = props
 
   return (
-    <div className="nav-container">
-      <div className="logo-container">
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-          alt="emoji logo"
-          className="logo"
-        />
-        <h1 className="logo-name">Emoji Game</h1>
+    <nav className="nav-bar-container">
+      <div className="title-with-score-container">
+        <div className="logo-and-title-container">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
+            alt="emoji logo"
+            className="emoji-logo"
+          />
+          <h1 className="title">Emoji Game</h1>
+        </div>
+        {isGameInProgress && (
+          <div className="scores-container">
+            <p className="score">Score: {currentScore}</p>
+            <p className="score">Top Score: {topScore}</p>
+          </div>
+        )}
       </div>
-      <div className={`scores-container ${resultClass}`}>
-        <p>Score: {score}</p>
-        <p>Top Score: {topScore}</p>
-      </div>
-    </div>
+    </nav>
   )
 }
 

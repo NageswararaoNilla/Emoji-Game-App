@@ -2,24 +2,26 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* background-color: #9796f0; */
-  /* background-image: radial-gradient(circle, #fbc7b4, #9796f0); */
-  background-image: linear-gradient(to bottom right, #9796f0, #fbc7b4);
+  background-image: linear-gradient(
+    to bottom right,
+    #9796f0 0.5%,
+    #fbc7b4 150%
+  );
 }
 
-.responsive-container {
+.emoji-game-body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
-.emojis-container {
+.emojis-list-container {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 80%;
-  margin-top: 64px;
-}
-
-.active-none {
-  display: none;
+  margin: auto;
+  padding: 0px;
+  max-width: 1000px;
 }
