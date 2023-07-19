@@ -1,1 +1,9 @@
 /* Write your code here. */
+
+.non-active {
+  display: none;
+}
+
+.active {
+  display: block;
+}

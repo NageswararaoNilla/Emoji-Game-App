@@ -1,1 +1,25 @@
-/* Write your code here. */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background-color: #9796f0; */
+  /* background-image: radial-gradient(circle, #fbc7b4, #9796f0); */
+  background-image: linear-gradient(to bottom right, #9796f0, #fbc7b4);
+}
+
+.responsive-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emojis-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 64px;
+}
+
+.active-none {
+  display: none;
+}
